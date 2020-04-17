@@ -77,18 +77,18 @@ class Game:
             [1, random.randint(0, 1)],
             [random.randint(0, 1), random.randint(0, 1)],
         ]
-        startingX = self.width/2
+        startingX = self.width / 2
         startingY = 0
         color = random.choice(COLORS)
         blocks = []
         if shapeMap[0][0]:
             blocks.append(self.AddBlock(startingX, startingY, color))
         if shapeMap[0][1]:
-            blocks.append(self.AddBlock(startingX+1, startingY, color))
+            blocks.append(self.AddBlock(startingX + 1, startingY, color))
         if shapeMap[1][0]:
-            blocks.append(self.AddBlock(startingX, startingY+1, color))
+            blocks.append(self.AddBlock(startingX, startingY + 1, color))
         if shapeMap[1][1]:
-            blocks.append(self.AddBlock(startingX+1, startingY+1, color))
+            blocks.append(self.AddBlock(startingX + 1, startingY + 1, color))
         print('blocks=', blocks)
         shape = Shape(blocks=blocks)
         self._shape = shape
